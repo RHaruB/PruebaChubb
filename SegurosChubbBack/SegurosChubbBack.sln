@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegurosChubbBack", "SegurosChubbBack\SegurosChubbBack.csproj", "{12CBFBA2-39F9-4219-9B8A-CCF5C0F90E7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12CBFBA2-39F9-4219-9B8A-CCF5C0F90E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12CBFBA2-39F9-4219-9B8A-CCF5C0F90E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12CBFBA2-39F9-4219-9B8A-CCF5C0F90E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12CBFBA2-39F9-4219-9B8A-CCF5C0F90E7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {045F062B-257A-4EA2-A349-361D144BE431}
+	EndGlobalSection
+EndGlobal
