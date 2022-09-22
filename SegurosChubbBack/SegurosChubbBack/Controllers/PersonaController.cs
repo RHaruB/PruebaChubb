@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SegurosChubbBack.Clases;
 using SegurosChubbBack.Interface;
 using System;
+using System.Collections.Generic;
 
 namespace SegurosChubbBack.Controllers
 {
@@ -34,12 +35,66 @@ namespace SegurosChubbBack.Controllers
             }
 
         }
+        
+        [HttpGet("ConsultarPersonas")]
+        public List<PersonaModel> ConsultarPersonas()
+        {
+            try
+            {
+                var resp = _Persona.ConsultarPersonas();
+
+                return resp;
+
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+        }
+
         [HttpPost("RegistrarPersona")]
         public bool RegistrarPersona(PersonaModel persona)
         {
             try
             {
                 var resp = _Persona.RegistrarPersona(persona);
+
+                return resp;
+
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+
+        }
+
+        [HttpPost("EditarPersona")]
+        public bool EditarPersona(PersonaModel persona)
+        {
+            try
+            {
+                var resp = _Persona.EditarPersona(persona);
+
+                return resp;
+
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+
+        }
+
+        [HttpPost("EliminarPersona")]
+        public bool EliminarPersona(PersonaModel persona)
+        {
+            try
+            {
+                var resp = _Persona.EliminarPersona(persona.Codigo);
 
                 return resp;
 

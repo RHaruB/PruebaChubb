@@ -56,5 +56,4 @@ C:\Users\Haru\source\repos\SegurosChubbBack\SegurosChubbBack\obj\Debug\net5.0\Se
 C:\Users\Haru\source\repos\SegurosChubbBack\SegurosChubbBack\obj\Debug\net5.0\SegurosChubbBack.pdb
 C:\Users\Haru\source\repos\SegurosChubbBack\SegurosChubbBack\obj\Debug\net5.0\SegurosChubbBack.genruntimeconfig.cache
 C:\Users\Haru\source\repos\SegurosChubbBack\SegurosChubbBack\obj\Debug\net5.0\ref\SegurosChubbBack.dll
-C:\Users\Haru\source\repos\SegurosChubbBack\SegurosChubbBack\bin\Debug\net5.0\ref\SegurosChubbBack.dll
-C:\Users\Haru\source\repos\SegurosChubbBack\SegurosChubbBack\obj\Debug\net5.0\staticwebassets\SegurosChubbBack.StaticWebAssets.xml
+C:\Users\Haru\source\repos\SegurosChubbBack\SegurosChubbBack\obj\Debug\net5.0\refint\SegurosChubbBack.dll

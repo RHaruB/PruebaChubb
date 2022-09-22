@@ -2,6 +2,7 @@
 using SegurosChubbBack.Clases;
 using SegurosChubbBack.Interface;
 using System;
+using System.Collections.Generic;
 
 namespace SegurosChubbBack.Controllers
 {
@@ -11,12 +12,13 @@ namespace SegurosChubbBack.Controllers
     {
         private readonly ISeguros _Seguros;
 
-       
+
         public SegurosController(ISeguros iseguros)
         {
             this._Seguros = iseguros;
         }
-        [HttpGet("RegistrarSeguro")]
+        
+        [HttpPost("RegistrarSeguro")]
         public bool RegistrarSeguro(SeguroModel seguro)
         {
             try
@@ -28,10 +30,26 @@ namespace SegurosChubbBack.Controllers
             catch (Exception)
             {
                 return false;
-                throw;
             }
         }
-        [HttpGet("EliminarSeguro")]
+
+        [HttpPost("EditarSeguro")]
+        public bool EditarSeguro(SeguroModel seguro)
+        {
+            try
+            {
+                var resp = _Seguros.EditarSeguro(seguro);
+                return resp;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        
+        [HttpPut("EliminarSeguro")]
         public bool EliminarSeguro(int codigo)
         {
             try
@@ -43,25 +61,61 @@ namespace SegurosChubbBack.Controllers
             catch (Exception)
             {
                 return false;
-                throw;
             }
         }
+        
         [HttpGet("ConsultarSeguro")]
         public SeguroModel ConsultarSeguro(int codigo)
         {
+            try
             {
-                try
-                {
-                    var resp = _Seguros.ConsultarSeguro(codigo);
-                    return resp;
-
-                }
-                catch (Exception)
-                {
-                    return null;
-                    throw;
-                }
+                var resp = _Seguros.ConsultarSeguro(codigo);
+                return resp;
+            }
+            catch (Exception)
+            {
+                return null;
             }
         }
+        
+        [HttpGet("ConsultarSeguros")]
+        public List<SeguroModel> ConsultarSeguros()
+        {
+            try
+            {
+                var resp = _Seguros.ConsultarSeguros();
+                return resp;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        [HttpPost("ConsultaPolizas")]
+        public List<PolizaModel> ConsultaPolizas(string cedula, int codigoSeguro)
+        {
+            try
+            {
+                var resp = _Seguros.ConsultaPolizas(cedula,  codigoSeguro);
+                return resp;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        [HttpPost("RegistroPolizas")]
+        public bool RegistroPoliza(int codigoPersona, int codigoSeguro)
+        {
+            try
+            {
+                return _Seguros.RegistroPoliza(codigoPersona, codigoSeguro);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+    
     }
 }

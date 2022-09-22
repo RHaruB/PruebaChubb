@@ -1,4 +1,5 @@
 ﻿using SegurosChubbBack.Clases;
+using System.Collections.Generic;
 
 namespace SegurosChubbBack.Interface
 {
@@ -8,6 +9,10 @@ namespace SegurosChubbBack.Interface
 
         bool RegistrarPersona(PersonaModel persona);
 
+        bool EditarPersona(PersonaModel persona);
 
+        bool EliminarPersona(int persona);
+
+        List<PersonaModel> ConsultarPersonas();
     }
 }
